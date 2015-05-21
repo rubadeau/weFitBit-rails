@@ -8,11 +8,7 @@ require 'rails_helper'
 
     scenario 'allows a user to sign out' do
 
-      user = User.create!(
-      :user_user_name, with: 'Testy',
-      :user_email, with: 'testyMcTesterson@example.com',
-      :user_password, with: 'password'
-      :user_password_confirmation, with: 'password')
+      create_user
 
       visit sign_in_path
 
