@@ -1,6 +1,11 @@
 require 'rails_helper'
 
 feature 'User signup flow' do
+
+  before :each do
+    User.destroy_all
+  end
+  
   scenario 'allows a user to sign up' do
     visit root_path
     expect(page).to have_content 'weFitBit'
