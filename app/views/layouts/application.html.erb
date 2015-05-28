@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>WeFitBit</title>
+  <title>weFitBit</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -10,14 +10,21 @@
   <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
       <h3>weFitBit</h3>
+      <div class="pull-right">
+        <%= link_to "Sign In" %>
+        <%= link_to "Sign Up", sign_up_path %>
+      </div>
     </div>
   </nav>
 <br />
 <br />
 <br />
 <br />
+<br />
 
 <div class="container">
+
+  <%= flash[:notice] %>
 
 <%= yield %>
 

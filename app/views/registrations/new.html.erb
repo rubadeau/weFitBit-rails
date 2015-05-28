@@ -1,0 +1,13 @@
+<h1>Are you ready?</h1>
+
+<%= form_for @user, url: sign_up_path do |f| %>
+  <%= f.label :user_name, "User Name" %>
+  <%= f.text_field :user_name %>
+  <%= f.label :email, "Email" %>
+  <%= f.email_field :email %>
+  <%= f.label :password, "Password" %>
+  <%= f.password_field :password %>
+  <%= f.label :password_confirmation, "Password Confirmation" %>
+  <%= f.password_field :password_confirmation %>
+  <%= f.submit "Let's do this" %>
+<% end %>
