@@ -1,0 +1,9 @@
+<h1>Sign into weFitBit</h1>
+
+<%= form_tag url: root_path do |f| %>
+  <%= label_tag :email, "Email" %>
+  <%= text_field_tag :email %>
+  <%= label_tag :password, "Password" %>
+  <%= password_field_tag :password %>
+  <%= submit_tag "Let's do this" %>
+<% end %>
