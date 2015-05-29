@@ -13,9 +13,7 @@ class AuthenticationsController < ApplicationController
     else
       render :new
     end
-
   end
-
 
   def destroy
     session.clear

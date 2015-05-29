@@ -6,6 +6,7 @@ Rails.application.routes.draw do
    post 'sign_up', to: 'registrations#create'
    get 'sign-in', to: 'authentications#new'
    post 'sign-in', to: 'authentications#create'
+   get 'sign-out', to: 'authentications#destroy'
 
    resources :challenges
 

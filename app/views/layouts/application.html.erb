@@ -11,8 +11,13 @@
     <div class="container">
       <h3>weFitBit</h3>
       <div class="pull-right">
-        <%= link_to "Sign In" %>
-        <%= link_to "Sign Up", sign_up_path %>
+        <% if current_user %>
+          <%= link_to "Sign Out", sign_out_path %>
+          <%= "#{current_user.user_name}" %>
+        <% else %>
+          <%= link_to "Sign Up", sign_up_path %>
+          <%= link_to "Sign In", sign_in_path %>
+        <% end %>
       </div>
     </div>
   </nav>
