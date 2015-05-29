@@ -5,7 +5,7 @@ class RegistrationsController < ApplicationController
   end
 
   def create
-    @user = User.new(params.require(:user).permit(:username, :email, :password))
+    @user = User.new(params.require(:user).permit(:user_name, :email, :password))
     if @user.save
       session[:user_id] = @user.id
       redirect_to new_challenge_path, notice: "Thanks for signing up!"
